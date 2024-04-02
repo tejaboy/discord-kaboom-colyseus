@@ -22,6 +22,12 @@ export class Player extends Schema {
 	@type("number")
 	public y: number = 0;
 
+	@type("number")
+	public target_x: number = 0;
+
+	@type("number")
+	public target_y: number = 0;
+
 	// Init
 	constructor({name, userId, avatarUri, sessionId, x, y}: TPlayerOptions) {
 		super();
@@ -31,5 +37,7 @@ export class Player extends Schema {
 		this.sessionId = sessionId;
 		this.x = x;
 		this.y = y;
+		this.target_x = x;
+		this.target_y = y;
 	}
 }

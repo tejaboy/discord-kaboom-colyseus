@@ -27,5 +27,9 @@ export function createLobbyScene() {
                 playerSprite.pos.y += (serverPlayer.y - playerSprite.pos.y) * 12 * k.dt();
             });
         });
+
+        k.onClick(() => {
+            room.send("move", k.mousePos());
+        })
     });
 }

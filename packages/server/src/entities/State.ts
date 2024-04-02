@@ -50,4 +50,12 @@ export class State extends Schema {
 			this.players.delete(player.userId);
 		}
 	}
+
+	setTargetMove(sessionId: string, target_x: number, target_y: number) {
+		const player = Array.from(this.players.values()).find((p) => p.sessionId === sessionId);
+		if (player != null) {
+			player.target_x = target_x;
+			player.target_y = target_y;
+		}
+	}
 }

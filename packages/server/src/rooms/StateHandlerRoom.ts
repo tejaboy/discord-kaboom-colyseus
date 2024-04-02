@@ -9,27 +9,19 @@ export class StateHandlerRoom extends Room<State> {
 	onCreate(options: IState) {
 		this.setState(new State(options));
 
-		this.onMessage('movement', (client, data) => {
-			// this.state.setMovement(client.sessionId, data.value);
+		this.onMessage('move', (client, data) => {
+			this.state.setTargetMove(client.sessionId, data.x, data.y);
 		});
 
 		// Game Loop
 		this.setSimulationInterval((deltaTime) => {
+			const speed = 1;
+
 			// Loop through all players
 			this.state.players.forEach((player, sessionId) => {
-				const speed = 300;
-				const nextX = Math.cos(0 * Math.PI / 180) * speed * (deltaTime / 1000);
-				const nextY = Math.sin(0 * Math.PI / 180) * speed * (deltaTime / 1000);
-				player.x += nextX;
-				player.y += nextY;
-
-				/* BOUNDS */
-				// When reaches end, restart at 0
-				if (player.x > GAME_WIDTH) {
-					player.x = 0;
-				} else if (player.x < 0) {
-					player.x = GAME_WIDTH;
-				}
+				// Move player towards target position (linear interpolation)
+				player.x += (player.target_x - player.x) * speed;
+				player.y += (player.target_y - player.y) * speed;
 			});
 		});
 	}
