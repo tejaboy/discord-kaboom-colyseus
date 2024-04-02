@@ -29,8 +29,8 @@ export class State extends Schema {
 	}
 
 	createPlayer(sessionId: string, playerOptions: TPlayerOptions) {
-		let x = 200;
-		let y = 200;
+		let x = Math.random() * GAME_WIDTH;
+		let y = Math.random() * GAME_HEIGHT;
 
 		const newPlayer = new Player({
 			...playerOptions,
