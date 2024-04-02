@@ -1,6 +1,6 @@
 import {Schema, MapSchema, type} from '@colyseus/schema';
 import {TPlayerOptions, Player} from './Player';
-import { BULLET_INTERVAL, BULLET_MAG_SIZE, GAME_HEIGHT, GAME_WIDTH, PLAYER_INITIAL_HEALTH } from '../shared/Constants';
+import { GAME_HEIGHT, GAME_WIDTH } from '../shared/Constants';
 
 export interface IState {
 	roomName: string;

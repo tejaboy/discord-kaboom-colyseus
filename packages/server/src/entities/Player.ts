@@ -1,5 +1,4 @@
 import {Schema, type} from '@colyseus/schema';
-import { BULLET_INTERVAL, BULLET_MAG_SIZE, PLAYER_INITIAL_HEALTH } from '../shared/Constants';
 
 export type TPlayerOptions = Pick<Player, 'sessionId' | 'userId' | 'name' | 'avatarUri' | 'x' | 'y'>;
 
