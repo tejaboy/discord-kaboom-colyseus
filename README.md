@@ -15,4 +15,4 @@ The lobby.ts is being imported to [/packages/client/src/App.ts](/packages/client
 ## How to add new server-side state?
 
 For a server authoritative game, you may add new property to the player in [/packages/server/src/entities/Player.ts](/packages/server/src/entities/Player.ts).
-Please take a look at how the server authoritative movement is being implemented in [/packages/server/src/rooms/StateHandlerRoom.ts](/packages/server/src/rooms/PStateHandlerRoomlayer.ts).
+Please take a look at how the server authoritative movement is being implemented in [/packages/server/src/rooms/StateHandlerRoom.ts](/packages/server/src/rooms/StateHandlerRoomlayer.ts).
