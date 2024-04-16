@@ -9,6 +9,8 @@ Bare minimum template to developer Discord activity with KaboomJS and Colyseus. 
 
 ## Setting up your Discord Application
 
+Video Tutorial: [https://www.youtube.com/watch?v=k6A2VUbIQio](https://www.youtube.com/watch?v=k6A2VUbIQio).
+
 Before we write any code, lets follow the instructions [here](https://discord.com/developers/docs/activities/building-an-activity#step-1-creating-a-new-app) to make sure your Discord application is set up correctly.
 
 ## Setting up your environment variables
